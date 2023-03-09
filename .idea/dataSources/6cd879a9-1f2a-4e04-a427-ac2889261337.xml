@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost [2]">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
+    <root id="1">
+      <ServerVersion>14.7</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="fastfood"/>
+    <database id="3" parent="1" name="hr"/>
+    <database id="4" parent="1" name="learning"/>
+    <database id="5" parent="1" name="northwind"/>
+    <database id="6" parent="1" name="postgres">
+      <Current>1</Current>
+    </database>
+    <database id="7" parent="1" name="restaurant"/>
+    <database id="8" parent="1" name="template0"/>
+    <database id="9" parent="1" name="template1"/>
+    <database id="10" parent="1" name="testdb"/>
+    <schema id="11" parent="6" name="information_schema"/>
+    <schema id="12" parent="6" name="pg_catalog"/>
+    <schema id="13" parent="6" name="public">
+      <Current>1</Current>
+    </schema>
+  </database-model>
+</dataSource>

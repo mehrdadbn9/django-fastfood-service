@@ -21,10 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+# SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-f$a5&of&tum3y6fslxti9bia#(9j#ntqp=6azx%hgm)09q_%@4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
+# DEBUG = config('DEBUG', cast=bool)
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -38,9 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'accounts',
-    'vendor',
 ]
 
 MIDDLEWARE = [
@@ -66,8 +65,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'accounts.context_processors.get_vendor',
-                'accounts.context_processors.get_google_api',
             ],
         },
     },
@@ -82,14 +79,18 @@ WSGI_APPLICATION = 'foodOnline_main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
+        'NAME': 'fastfood',
+        'USER': 'mehrdad',
+        'PASSWORD': '123123',
+        'HOST': 'localhost',
     }
 }
-
-AUTH_USER_MODEL = 'accounts.User'
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -134,27 +135,7 @@ STATICFILES_DIRS = [
     'foodOnline_main/static'
 ]
 
-# Media files configuration
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR /'media'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-from django.contrib.messages import constants as messages
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger',
-}
-
-# Email configuration
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT', cast=int)
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'foodOnline Marketplace <django.foodonline@gmail.com>'
-
-GOOGLE_API_KEY = 'AIzaSyC4yTudrg9pTcB2khAgrbCMBfVvbviOhVU'
