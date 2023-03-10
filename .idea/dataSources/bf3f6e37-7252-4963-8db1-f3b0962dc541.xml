@@ -14,7 +14,7 @@
 16385||10|T|G
 16385||16386|T|G
 16385||16533|T|G</Grants>
-      <IntrospectionStateNumber>916</IntrospectionStateNumber>
+      <IntrospectionStateNumber>918</IntrospectionStateNumber>
       <ServerVersion>14.7</ServerVersion>
       <StartupTime>1678221904</StartupTime>
       <TimeZones>true ACDT
@@ -1411,7 +1411,7 @@ false posixrules
 13433||10|C|G
 13433||-9223372036854775808|U|G
 13433||10|U|G</Grants>
-      <IntrospectionStateNumber>917</IntrospectionStateNumber>
+      <IntrospectionStateNumber>919</IntrospectionStateNumber>
       <ObjectId>16385</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
